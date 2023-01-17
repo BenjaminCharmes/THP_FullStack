@@ -1,4 +1,4 @@
-<h1 align="center">Day 16 of The Hacking Project: Discovering OOP !</h1>
+<h1 align="center">Day 21 of The Hacking Project: Discovering OOP !</h1>
 
 <h2 align="center">🎉 Week 2: Day 1 of the FullStack training 🎉</h2>
 
