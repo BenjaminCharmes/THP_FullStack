@@ -66,11 +66,11 @@ Here is the repository of all my projects from the FullStack bootcamp training a
 - [**Day 4:** AJAX (2/2)](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_3/Day_4)
 - [**Day 5:** Teamwork and Git workflow](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_3/Day_5)
 
-### [:heavy_check_mark: **Week 7:**  Project: online shop](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_7)
+### [:heavy_check_mark: **Week 7:** Project: online shop](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_7)
 
 - [**Sammy Shop**](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_3/Day_1)
 
-### [:heavy_check_mark: **Week 8 & 9:**  Final Project](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_8_to_9)
+### [:heavy_check_mark: **Week 8 & 9:** Final Project](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_8_to_9)
 
 - [**Mojo Coaching**](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_8_to_9)
 

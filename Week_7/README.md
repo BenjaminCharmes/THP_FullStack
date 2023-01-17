@@ -1,12 +1,6 @@
-<h1 align="center">Week 10 of The Hacking Project: Project: online shop !</h1>
+<h1 align="center">Week 10: Day 46 to 50 of The Hacking Project: Project: online shop !</h1>
 
-<h2 align="center">🎉 Week 7 of the FullStack training 🎉</h2>
-
-<div align="center">
-
-  [Go to Day 1️⃣ - ➡️](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_7/Day_1)
-
-</div>
+<h2 align="center">🎉 Week 7: Day 1 to 5 of the FullStack training 🎉</h2>
 
 <div align="center">
   
