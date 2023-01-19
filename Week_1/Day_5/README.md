@@ -1,5 +1,7 @@
 <h1 align="center">Day 20 of The Hacking Project: MVC - Ruby Version !</h1>
 
+You will learn how to use the MVC framework via an application where you can throw out all the gossip you want.
+
 <h2 align="center">🎉 Week 1: Day 5 of the FullStack training 🎉</h2>
 
 <div align="center">
