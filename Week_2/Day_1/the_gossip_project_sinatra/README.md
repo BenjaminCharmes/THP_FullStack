@@ -1,22 +1,19 @@
-<h1 align="center">Day 21 of The Hacking Project: The Gossip Project - Sinatra</h1>
+<h1 align="center">Day 21 of The Hacking Project: Discovering OOP !</h1>
 
 We will make a nice application in Sinatra
 
-<h2 align="center">🎉 Day 6 of the Full Stack training 🎉</h2>
+<h2 align="center">🎉 Week 2: Day 1 of the FullStack training 🎉</h2>
 
-### How to launch ###
+<div align="center">
+  
+  [Go to Day 2️⃣ - ➡️](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_2/Day_2)
 
-```ruby
-$ bundle exec shotgun -p 4567  
-```
-Open URL: `localhost:4567`
+</div>
 
-### Main features ###
+<div align="center">
 
-* The site's home page will display all the gossip we have in the base.
-* This home page will give a link for a form where anyone can add a gossip.
-* All Gossips have a dedicated page, from which anyone can also edit the Gossip.
+  [🔙 - Back to week 2️⃣](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_2)
 
-### Features that doesn't work ###
+  [🔙 - Back to home page](https://github.com/BenjaminCharmes/THP_FullStack)
 
-* Add a comment on a gossip.
+</div>
