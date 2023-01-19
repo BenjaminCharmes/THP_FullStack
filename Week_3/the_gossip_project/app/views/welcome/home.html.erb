@@ -1,0 +1,14 @@
+<h1>Bienvenue <%= params[:first_name] %> !</h1>
+<p>Ici c'est notre super site de potins, il est chouette, non ?</p>
+<p>Voici les potins dont nous disposons dans notre base de donnée:</p>
+
+<% @gossips.each_with_index do |gossip, index| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= gossip.title %></h5>
+      <p class="card-text">Écrit par: <%= link_to "#{gossip.user.first_name}", user_show_path(gossip.user.first_name) %></p>
+      <a href="/gossip/<%= index + 1 %>" class="btn btn-primary">Lire le gossip</a>
+    </div>
+  </div>
+  <hr/>
+<% end %>

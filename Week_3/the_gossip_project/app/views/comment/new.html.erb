@@ -1,0 +1,25 @@
+<h1>Bienvenue sur la page de création d'un commentaire sur le gossip <%= params[:gossip_id] %> !</h1><br>    
+
+<% if @comment %>
+  <% if @comment.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <p>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
+    <ul>
+      <% @comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
+</div>
+<br/>
+
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+
+  <%= label_tag 'Commentaire:' %>
+  <%= text_field_tag 'content' %>
+  <br/> <br/>
+
+  <%= submit_tag "Envoyer le formulaire" %>
+
+<% end %>

@@ -1,0 +1,29 @@
+<h1>Bienvenue sur la page de la ville de <%= @city.name %> !</h1><br>
+<p>
+Voici la liste des gossips ayant été écrit par des utilisateurs habitant à <%= @city.name %>
+</p>
+<% @city.gossips.each do |gossip| %>
+  <div class="card bg-light" style="width: 25rem;">
+    <div class="card-body">
+        <div class="row">
+        <div class="col">
+          <h5 class="card-title"><%= gossip.title %></h5>
+          <p class="card-text">Écrit par: <%= link_to "#{gossip.user.first_name}", user_path(gossip.user.id) %></p>
+          <%= button_to "Lire ce gossip", gossip_path(gossip.id), :method => "get" %>
+        </div>
+        <div class="col">
+          <h5>Commentaire(s): <%= gossip.comments.count %></h5>
+          <p><h5>Likes: <%= gossip.likes.count %></h5></p>
+          <% if current_user %>
+            <% if log_in(current_user) && current_user.likes.include?(Like.find_by(likeable: gossip, user: current_user)) %>
+            <%= button_to "Je n'aime plus", like_path(Like.find_by(likeable: gossip, user: current_user)), :method => "delete" %><br>
+            <% else %>
+            <%= link_to "J'aime", new_like_path(likeable_id: gossip.id, likeable_type: 'Gossip') %>
+            <% end %>
+          <% end %>
+        </div>
+        </div>
+      </div>
+    </div>
+  <hr/>
+<% end %>

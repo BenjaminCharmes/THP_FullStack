@@ -1,0 +1,33 @@
+<h1>Bienvenue sur la page de modification du gossip <%= params[:id]%> !</h1><br>    
+
+<% if @gossip %>
+  <% if @gossip.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <p>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
+    <ul>
+      <% @gossip.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
+</div>
+<br/>
+
+<%= form_tag url_for(action: 'update'), method: "put" do %>
+
+  <%= label_tag 'Titre du gossip:' %>
+  <%= text_field_tag 'title', @gossip.title %>
+  <br/> <br/>
+
+  <%= label_tag 'Contenu du gossip:' %>
+  <%= text_field_tag 'content', @gossip.content %>
+  <br/> <br/>
+
+  <%= label_tag 'Tag:' %>
+  <%= select_tag 'tag', options_from_collection_for_select(@tags, 'id', 'title', @tag.id) %>
+  <br/> <br/>
+
+  <%= submit_tag "Envoyer le formulaire" %>
+
+<% end %>

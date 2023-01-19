@@ -1,0 +1,54 @@
+<h1>Voici le gossip numéro <%= @gossip.id %>:</h1>
+<p>
+  <strong>Auteur:</strong> <%= link_to "#{@author.first_name}", user_path(@author.id) %><br/>
+  <strong>Ville:</strong> <%= link_to "#{@author.city.name}", city_path(@author.city_id) %>
+</p>
+<p>
+  <strong>Titre du gossip:</strong> <%= @gossip.title %><br/>
+  <strong>Contenu du gossip:</strong> <%= @gossip.content %><br/>
+  <strong>Tag:</strong> <% @gossip.tags.each do |tag| %>
+        <%= tag.title %>
+      <% end %>
+  <br/>
+</p>
+<p>
+  Date de création: <%= @gossip.created_at %><br/>
+</p>
+<p>
+<% if current_user == @author %>
+  <%= button_to "Modifier ce gossip", edit_gossip_path(@gossip.id), :method => "get" %><br>
+  <%= button_to "Supprimer ce gossip", gossip_path(@gossip), :method => "delete" %><br>
+<% end %>
+  <%= button_to "Écrire un commentaire", new_gossip_comment_path(@gossip.id), :method => "get" %>
+</p>
+<div>
+<h3><strong>Likes:</strong> <%= @gossip.likes.count %></h3>
+<% if current_user %>
+  <% if log_in(current_user) && current_user.likes.include?(Like.find_by(likeable: @gossip, user: current_user)) %>
+  <%= button_to "Je n'aime plus", like_path(Like.find_by(likeable: @gossip, user: current_user)), :method => "delete" %><br>
+  <% else %>
+  <%= link_to "J'aime", new_like_path(likeable_id: @gossip.id, likeable_type: 'Gossip') %>
+  <% end %>
+<% end %>
+</div>
+<p>
+<h3>Commentaires:</h3>
+</p>
+<% @gossip.comments.sort.each do |comment| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= comment.content %></h5>
+      <p class="card-text">Écrit par: <%= link_to "#{comment.user.first_name}", user_path(comment.user.id) %></p>
+      <% if current_user %>
+        <% if current_user.id == comment.user_id %>
+          <%= button_to "Modifier ou supprimer ce commentaire", edit_gossip_comment_path(@gossip.id, comment.id), :method => "get" %>
+        <% end %>    
+      <% end %>
+    </div>
+  </div>
+  <hr/>
+<% end %>
+
+  <% puts "$"*30
+  puts params
+  puts "$"*30 %>

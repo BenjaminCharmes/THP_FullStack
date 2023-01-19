@@ -1,0 +1,49 @@
+<h1>Bienvenue sur la page de modification d'un utilisateur !</h1><br>    
+
+<% if @user %>
+  <% if @user.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <p>Nous n'avons pas réussi à créer l'utilisateur pour la (ou les) raison(s) suivante(s) :</p>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
+</div>
+<br/>
+
+<%= form_tag url_for(action: 'update'), method: "put" do %>
+
+  <%= label_tag 'Prénom:' %>
+  <%= text_field_tag 'first_name', @user.first_name %>
+  <br/> <br/>
+
+  <%= label_tag 'Nom:' %>
+  <%= text_field_tag 'last_name', @user.last_name %>
+  <br/> <br/>
+
+  <%= label_tag 'Email:' %>
+  <%= text_field_tag 'email', @user.email %>
+  <br/> <br/>
+
+  <%= label_tag 'Mot de passe:' %>
+  <%= password_field_tag 'password' %>
+  <br/> <br/>
+
+  <%= label_tag 'Âge:' %>
+  <%= text_field_tag 'age', @user.age %>
+  <br/> <br/>
+
+  <%= label_tag 'Ville:' %>
+  <%= select_tag 'city', options_from_collection_for_select(@cities, 'id', 'name', @user.city.id) %>
+  <br/> <br/>
+
+  <%= label_tag 'Description:' %>
+  <%= text_field_tag 'description' %>
+  <br/> <br/>
+
+  <%= submit_tag "Envoyer le formulaire" %>
+
+<% end %>
