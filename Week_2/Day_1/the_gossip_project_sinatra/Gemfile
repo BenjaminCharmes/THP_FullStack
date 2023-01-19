@@ -1,0 +1,11 @@
+source "https://rubygems.org"
+ruby '3.0.0'
+gem 'rspec'
+gem 'dotenv'
+gem 'pry'
+gem 'rubocop'
+gem 'sinatra'
+gem 'puma'
+gem 'rack', '~> 2.2', '>= 2.2.4'
+gem 'shotgun', git: 'https://github.com/delonnewman/shotgun.git'
+gem 'csv'

@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>The Gossip Project - Edit gossip</title>
+  </head>
+  <body>
+    <h1>Éditer un Gossip</h1>
+    <p>Édites le gossip <%= params["id"].to_i + 1%>:</p>
+    <form action='/gossips/<%= params["id"]%>/edit/' method='POST'>
+      Ton nom :  <input type='text' name='gossip_author'/><br/>
+      Nouveau gossip : <input type='text' name='gossip_content'/><br/>
+      <input type='submit'/>
+    </form>
+  </body>
+</html>

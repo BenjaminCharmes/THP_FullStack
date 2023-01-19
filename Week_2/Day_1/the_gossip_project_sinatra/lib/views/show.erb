@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>The Gossip Project - Show gossip</title>
+  </head>
+  <body>
+    <h1>The Gossip Project: La page du gossip</h1>
+    <h3>Voici la page du potin n° <%= params["id"].to_i + 1%>:</h3>
+    <p>
+      Son auteur : <%= gossip.author %><br/>
+      Le contenu du gossip : <%= gossip.content %><br/>
+    </p>
+    <p><b>Si tu souhaite modifier ce gossip, clique ici: <a href="/gossips/<%= params["id"] %>/edit/"><button>Modifier ce gossip</button></a></b></p>
+    <a href="/">Revenir à la page des gossips.</a>
+  </body>
+</html>
