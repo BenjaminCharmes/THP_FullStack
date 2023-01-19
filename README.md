@@ -36,11 +36,11 @@ Here is the repository of all my projects from the FullStack bootcamp training a
 
 ### [:heavy_check_mark: **Week 3:** Intermediate Rails](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_3)
 
-- [**Day 1:** Discovering Rails](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_3/Day_1)
-- [**Day 2:** Using routes and forms](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_3/Day_2)
-- [**Day 3:** CRUD](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_3/Day_3)
-- [**Day 4:** Pimp of the Gossip Project](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_3/Day_4)
-- [**Day 5:** Improve a site with login & Cookies 🍪](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_3/Day_5)
+- [**Day 1:** Discovering Rails](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_3)
+- [**Day 2:** Using routes and forms](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_3)
+- [**Day 3:** CRUD](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_3)
+- [**Day 4:** Pimp of the Gossip Project](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_3)
+- [**Day 5:** Improve a site with login & Cookies 🍪](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_3)
 
 ### [:heavy_check_mark: **Week 4:** Advanced Rails](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4)
 
