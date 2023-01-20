@@ -1,4 +1,4 @@
-<h1 align="center">Day 37 of The Hacking Project: Further into OOP !</h1>
+<h1 align="center">Day 37 of The Hacking Project: Molecules and organisms !</h1>
 
 You will use components to design the molecules and organisms that make up the majority of web pages.
 

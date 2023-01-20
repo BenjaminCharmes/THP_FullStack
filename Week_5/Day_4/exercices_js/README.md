@@ -1,4 +1,4 @@
-<h1 align="center">Day 39 of The Hacking Project: OOP of Champions: tic-tac-toe !</h1>
+<h1 align="center">Day 39 of The Hacking Project: JavaScript: the basics !</h1>
 
 After more than a month of coding in Ruby, thinking in Ruby, and for the more involved, dreaming in Ruby, we're going to give you a little headache (one more!) by asking you to completely change your habits. It's time to switch to JavaScript! Yes, it's as if, after having eaten German for 6 weeks, you had to start from scratch but this time with Spanish... tough.
 

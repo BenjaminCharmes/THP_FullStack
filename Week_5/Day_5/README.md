@@ -1,4 +1,4 @@
-<h1 align="center">Day 40 of The Hacking Project: MVC - Ruby Version !</h1>
+<h1 align="center">Day 40 of The Hacking Project: Playing with the DOM !</h1>
 
 Let's practice manipulating the DOM with JavaScript
 

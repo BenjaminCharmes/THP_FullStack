@@ -1,4 +1,4 @@
-<h1 align="center">Week 6 of The Hacking Project: Intermediate Rails !</h1>
+<h1 align="center">Week 6: Day 26 to 30  of The Hacking Project: Intermediate Rails !</h1>
 
 Day 1: We're going to ask you to make a simple application, which will make you manipulate the links, and the routes. And quickly the controller.
 
@@ -10,7 +10,7 @@ Day 4: We are going to give the possibility of liking and commenting the gossips
 
 Day 5: You're going to add a cookie system to The Gossip Project, and then code a system that respects the privacy of users. So cool.
 
-<h2 align="center">🎉 Week 3 of the FullStack training 🎉</h2>
+<h2 align="center">🎉 Week 3: Day 1 to 5 of the FullStack training 🎉</h2>
 
 <div align="center">
   

@@ -1,4 +1,4 @@
-<h1 align="center">Day 38 of The Hacking Project: Playing with excels !</h1>
+<h1 align="center">Day 38 of The Hacking Project: Rails, front, and components !</h1>
 
 You will take over the Eventbrite project (Week 4) and then arrange all the molecules into partials.
 
