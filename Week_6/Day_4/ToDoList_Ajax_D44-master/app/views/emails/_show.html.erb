@@ -1,0 +1,10 @@
+<div id="<%= @email.id%>">
+<h2>Objet email: <%= @email.object %></h2><br>
+<p>Contenu email: <%= @email.body %> </p>
+<%= button_to "Supprimer", email_path(@email.id), :method => :delete, remote: true %>
+<% if @email.read == true %>
+  <%= button_to "Marquer comme non-lu", email_path(@email.id), method: :put, remote: true, params: { id: @email.id, read: false} %>
+<% else %>
+  <%= button_to "Marquer comme lu", email_path(@email.id), method: :put, remote: true, params: { id: @email.id, read: true} %>
+<% end %>
+</div>

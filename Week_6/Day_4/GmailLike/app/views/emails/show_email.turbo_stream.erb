@@ -1,0 +1,12 @@
+<%= turbo_stream.replace "show_email" do %>
+  <div id="show_email" class="card mb-2 box-shadow">
+    <p>
+      <strong>Object:</strong>
+      <%= email.object %>
+    </p>
+    <p>
+      <strong>Body:</strong>
+      <%= email.body %>
+    </p>
+  </div>
+<% end %>

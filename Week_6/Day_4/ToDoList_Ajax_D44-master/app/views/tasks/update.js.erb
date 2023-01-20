@@ -1,0 +1,8 @@
+var checkbox = document.getElementById("check<%= @task.title %>");
+var li = checkbox.parentNode
+
+checkbox.remove();
+
+li.insertAdjacentHTML("beforeend", "<%= j render 'checked', task: @task%>");
+li.classList.toggle('checked');
+

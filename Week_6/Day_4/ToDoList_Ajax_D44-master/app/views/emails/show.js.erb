@@ -1,0 +1,5 @@
+var email = document.getElementById("email");
+email.innerHTML = "<%= j render "show", email: @email%>";
+
+var liEl = document.getElementById("<%= @email.id %>");
+liEl.classList.remove("unread")

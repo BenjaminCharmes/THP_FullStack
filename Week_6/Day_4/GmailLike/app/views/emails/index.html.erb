@@ -1,0 +1,50 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <%= button_to "Recevoir un email", emails_path, :method => "post", class: 'btn btn-primary' %>
+</div>
+
+<div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row text-center">
+
+          <div class="col-md">
+            <div class="card mb-4 box-shadow" style="padding: 5px">
+              <h1>Liste des emails</h1>
+              <div id="emails">
+                <% @emails.each_with_index do |email, index| %>
+                  <div class="card mb-2 box-shadow" id="<%= index + 1 %>">
+                    <%= render email %>
+                    <p>
+                      <%=link_to "Show this email", email_path(email.id) ,
+                                          data: {
+                                          controller: "emails",
+                                          action: "click->emails#showEmails",
+                                          emails_object_param: "#{email.object}",
+                                          emails_body_param: "#{email.body}",
+                                          emails_id_param: "#{email.id}",
+
+                                        }, class: "btn btn-dark" %><br/>
+                      <%= button_to "Delete this email", email_path(email.id), :method => "delete", class: "btn btn-dark" %>
+                    </p>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card mb-4 box-shadow">
+              <h1>Email sélectionné</h1>
+                <div id="object" class="card mb-2 box-shadow">
+                </div>
+                <div id="body" class="card mb-2 box-shadow">
+                </div>
+                <div id="supp" class="card mb-2 box-shadow">
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>

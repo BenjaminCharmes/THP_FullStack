@@ -1,0 +1,11 @@
+<li id="<%= task.title %>">
+  <%= task.title %>, to read: <%= task.deadline.strftime('%D') %>
+  <%= button_to "delete", task_path(task.id), :method => :delete, remote: true %>
+  <div id="check<%= task.title %>">
+  <% if task.status == false %>
+    <%= check_box_tag :change_status, 1, false, data: { remote: true, url: task_path(task.id), params: { id: task.id, status: true}.to_param, method: "put" }%>
+  <% else %>
+    <%= check_box_tag :change_status, 1, true, data: { remote: true, url: task_path(task.id), params: { id: task.id, status: false}.to_param, method: "put" }%>
+  <% end %>
+</div>
+</li>

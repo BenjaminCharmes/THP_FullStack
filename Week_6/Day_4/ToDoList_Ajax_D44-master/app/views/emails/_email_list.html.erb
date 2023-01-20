@@ -1,0 +1,3 @@
+ <li id="<%= email.id %>" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action unread">
+      <%= link_to "#{email.object}", email_path(email.id), remote: true %>
+</li>

@@ -1,4 +1,10 @@
-<h1 align="center">Day 41 of The Hacking Project: Discovering OOP !</h1>
+<h1 align="center">Day 41 of The Hacking Project: AJAX (1/2) !</h1>
+
+Now you know how to code in JS, browse the DOM, modify HTML elements and detect user events: it's time to put all this knowledge together! You are finally going to create your first interactive page.
+
+In this project we'll give you a pre-made HTML page (which will remind you of a past project...). You will add a lot of features to this page so that it reacts to a visitor's actions. It's up to you!
+
+PS: just like the DOM modification project: you can't touch the HTML file! We're going to do everything through JavaScript.
 
 <h2 align="center">🎉 Week 6: Day 1 of the FullStack training 🎉</h2>
 

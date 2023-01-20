@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center pb-4">
+  <%=button_to "Recevoir un email", emails_path, method: 'POST', class: "btn btn-primary", remote: true%>
+</div>
+<div class="row justify-content-center">
+  <div class="col-md-3 border-end">
+  <h2>Liste des emails <span class="badge bg-primary rounded-pill"><%= @emails.length %></span></h2> 
+  <ul id="list" class="list-group">
+    <%@emails.each do |email|%>
+      <li id="<%= email.id%>"  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action <%= 'unread' if email.read == false %>">
+        <%=link_to "#{email.object}", email_path(email.id), remote: true %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div id="email" class="col-md-8 border">
+  <h2>Sélectionnez un email</h2>
+</div>

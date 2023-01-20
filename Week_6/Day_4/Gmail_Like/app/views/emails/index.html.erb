@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+
+<%= button_to "Recevoir un email", emails_path, :method => "post", class: 'container btn btn-primary', remote: true %>
+
+<div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row text-center">
+
+          <div class="col-md">
+            <div class="card mb-4 box-shadow" style="padding: 5px">
+              <h1>Liste des emails</h1>
+              <div id="emails">
+                <% @emails.each do |email| %>
+                  <div class="card mb-2 box-shadow">
+                    <%= render email %>
+                    <p>
+                      <%= link_to "Show this email", email_path(email.id), class: "btn btn-dark", remote: true %>
+                    </p>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card mb-4 box-shadow">
+              <h1>Email sélectionné</h1>
+                <div id="email" class="card mb-2 box-shadow">
+                  <script>
+                    let showEmails = document.getElementsByClassName("btn btn-dark");
+                    console.log(showEmails);
+                    showEmails.addEventListener("click", function(e) {
+                      e.preventDefault();
+                      console.log("bravo");  
+                    });
+                  </script>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
