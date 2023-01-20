@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Exercice de parcours du DOM</title>
+
+  </head>
+
+  <body>
+
+    <h1>Modifier une page HTML avec JavaScript (via le DOM)</h1>
+
+    <p>Maintenant que tu as repris JS, on va t&#39;apprendre à modifier les éléments d&#39;une page HTML grâce à JS. Tout ça se fait via la manipulation du DOM.</p>
+    
+    <h2>1. Introduction</h2>
+    
+    <p>En liant un fichier HTML à un fichier JavaScript, tu vas permettre à ce dernier d&#39;accéder au contenu de la page que tu es en train de coder. Et l&#39;interface qui permet au fichier <code class="prettyprint">.js</code> de faire ça s&#39;appelle le Document Object Model ou DOM. Ce DOM est, en définitive, le standard du web pour accéder au contenu HTML d&#39;un fichier.</p>
+    
+    <p>Et évidemment, qui dit &quot;accéder&quot; dit &quot;modifier&quot; ... 🥳</p>
+    
+    <h2 id="coucou">2. Historique et contexte</h2>
+    
+    <p>Maintenant que tu as repris JavaScript en écrivant à nouveau des boucles et des fonctions dans sa syntaxe, on va voir la principale utilisation de ce langage dans le web : manipuler à sa guise les pages HTML. Comme on te l&#39;expliquait, Javascript est le standard, sur Internet, pour animer des pages web : faire apparaître/disparaître des éléments, changer le CSS, modifier le contenu d&#39;éléments HTML, etc.</p>
+    
+    <p>Pour bien te laisser le temps de maîtriser le DOM, on ne va pas parler encore d&#39;évènements (= réagir aux actions de l&#39;utilisateur : clic, appui sur une touche, passage de la souris sur un élément de la page, etc.). Aujourd&#39;hui, on se contente d&#39;apprendre une chose : accéder, via le DOM, aux éléments d&#39;une page HTML et les modifier. Let&#39;s GO ! 🌠</p>
+    
+    <h2>3. La ressource</h2>
+    
+    <p>Internet regorge de belles ressources sur le DOM et son fonctionnement. On va t&#39;en proposer quelques-unes.</p>
+    
+    <h3>3.1. Le principe général de fonctionnement du DOM</h3>
+    
+    <p>Commence par regarder <a href="https://www.youtube.com/watch?v=eY_dlL4iAto" rel="nofollow" target="_blank">cette courte vidéo</a> qui te présente le principe général d&#39;utilisation du DOM en JS.</p>
+    
+    <p>Ensuite jette un oeil à <a href="https://youtu.be/iR01DKCgaH8" rel="nofollow" target="_blank">cette vidéo de la Khan Academy</a>.</p>
+    
+    <p class="compte-moi">Grâce à ces deux ressources, tu comprends bien qu&#39;il y a 2 étapes quand on veut modifier un élément HTML :</p>
+    
+    <ol>
+    <li class="compte-moi"> <strong>Le cibler via un selecteur du DOM et le &quot;stocker&quot; dans une variable JS</strong>.<br>
+    Par exemple : <code class="prettyprint">let elementsToBeModified = document.getElementsByTagName(&#39;p&#39;)</code> pour récupérer tous les éléments paragraphe (tag HTML <code class="prettyprint">&lt;p&gt;</code>). <code class="prettyprint">elementsToBeModified</code> contiendra plusieurs éléments du DOM, un peu comme un array.</li>
+    <li> <strong>Passer ensuite une méthode du DOM sur la variable JS pour modifier l&#39;élément qu&#39;elle identifie</strong>.<br>
+    Par exemple : <code class="prettyprint">elementsToBeModified[0].innerHTML = &quot;coucou&quot;</code> pour modifier le contenu HTML du premier élément <code class="prettyprint">&lt;p&gt;</code> stocké dans <code class="prettyprint">elementsToBeModified</code>.</li>
+    </ol>
+    
+    <p>Voyons ces deux étapes plus en détail.</p>
+    
+    <h3>3.2. Sélectionner un élément de la page HTML via le DOM</h3>
+    
+    <p>Il existe plusieurs sélecteurs pour pointer vers les éléments d&#39;une page HTML :</p>
+    
+    <ul>
+    <li>Lis ce <a href="https://openclassrooms.com/fr/courses/3306901-creez-des-pages-web-interactives-avec-javascript/3501871-decouvrez-le-dom" rel="nofollow" target="_blank">cours d&#39;OpenClassRooms</a> qui te présente les généralités sur le DOM et les sélecteurs (pas besoin de faire les exercices après le &quot;En résumé&quot;).</li>
+    <li>Maintenant passe au <a href="https://www.w3schools.com/js/js_htmldom_elements.asp" rel="nofollow" target="_blank">tuto W3schools sur les sélecteurs</a>. Il te présente différentes façons de pointer vers un élément <strong>précis</strong> de ta page.</li>
+    <li>Ensuite, <a href="https://www.w3schools.com/js/js_htmldom_navigation.asp" rel="nofollow" target="_blank">ce tuto W3Schools</a> te montre une autre façon de pointer vers les éléments d&#39;une page : en parcourant le DOM comme une arborescence de noeuds.</li>
+    <li>Retour sur <a href="https://openclassrooms.com/fr/courses/3306901-creez-des-pages-web-interactives-avec-javascript/3501886-parcourez-le-dom" rel="nofollow" target="_blank">le tuto OpenClassRoom</a> pour avoir plus de détails par sélecteur en t&#39;arrêtant avant la partie &quot;Obtenir des informations sur les éléments&quot;.</li>
+    </ul>
+    
+    <h3>3.3. Modifier les éléments de la page HTML</h3>
+    
+    <p>Une fois un élément ciblé, tu peux modifier de plusieurs façons la page :</p>
+    
+    <ul>
+    <li>Soit en modifiant l&#39;élément lui-même (en changeant son code HTML ou ses attributs comme <code class="prettyprint">src</code> ou <code class="prettyprint">href</code>) comme <a href="https://www.w3schools.com/js/js_htmldom_html.asp" rel="nofollow" target="_blank">expliqué ici</a>.</li>
+    <li>Soit en changeant son CSS <a href="https://www.w3schools.com/js/js_htmldom_css.asp" rel="nofollow" target="_blank">comme expliqué là</a> (inutile de lire la partie concernant les évènements : on en parlera plus tard).</li>
+    <li>Soit tu peux carrément créer, supprimer ou remplacer des nouveaux &quot;noeuds&quot; du DOM <a href="https://www.w3schools.com/js/js_htmldom_nodes.asp" rel="nofollow" target="_blank">comme le montre W3schools ici</a>.</li>
+    </ul>
+    
+    <p>Ce <a href="https://openclassrooms.com/fr/courses/3306901-creez-des-pages-web-interactives-avec-javascript/3501891-modifiez-la-structure-de-la-page" rel="nofollow" target="_blank">cours OpenClassRooms</a> résume pas mal toutes les modifications que tu peux apporter (inutile de faire les exercices à la fin).</p>
+    
+    <h2>3.4. Pour finir ...</h2>
+    
+    <p class="compte-moi">Cette <a href="https://www.youtube.com/watch?v=1N5cNqL6PjI&feature=youtu.be" rel="nofollow" target="_blank">vidéo de la Khan Academy</a> montre un exemple complet de manipulation du DOM : on sélectionne puis on modifie !</p>
+    
+    <p>Dernier point important à avoir en tête : la majorité des sélecteurs du DOM vont te retourner des éléments HTML ou des Noeuds sous une forme proche d&#39;un array mais <strong>sans qu&#39;il s&#39;agisse réellement d&#39;array</strong>. W3Schools explique cela très bien dans les cours suivants (notamment en fin de page) :</p>
+    
+    <ul>
+    <li><a href="https://www.w3schools.com/js/js_htmldom_collections.asp" rel="nofollow" target="_blank">Ici ils parlent des collections HTML</a> retournées notamment par les sélecteurs comme <code class="prettyprint">getElementsByTagName</code> ou <code class="prettyprint">getElementsByClassName</code> (ce qui explique le <strong>&quot;s&quot;</strong> à &quot;Elements&quot;).</li>
+    <li><a href="https://www.w3schools.com/js/js_htmldom_nodelist.asp" rel="nofollow" target="_blank">Ici ils parlent des collections de Noeuds</a> retournées notamment par le sélecteur <code class="prettyprint">querySelectorAll</code>.</li>
+    </ul>
+    
+    <h2>4. Points importants à retenir</h2>
+    
+    <p>Le DOM est une interface standardisée pour accéder au contenu HTML d&#39;une page.</p>
+    
+    <h3>4.1. Pour parcourir le DOM</h3>
+    
+    <p>Voici comment sélectionner, via le DOM, un élément HTML ou un groupe d&#39;éléments HTML de ton choix :</p>
+    
+    <ul>
+    <li>via son Id CSS : <code class="prettyprint">document.getElementById(&quot;tableau&quot;)</code></li>
+    <li>via leur tag HTML (ex : ,  ou encore ) : <code class="prettyprint">document.getElementsByTagName(&quot;div&quot;)</code></li>
+    <li>via leur classe CSS : <code class="prettyprint">document.getElementsByClassName(&quot;title&quot;)</code></li>
+    <li>via une requête type CSS (mélangeant tags et class par exemple) : <code class="prettyprint">document.querySelectorAll(&quot;p.title&quot;)</code></li>
+    </ul>
+    
+    <p>Une fois un élément sélectionné, on peut naviguer dans le DOM comme au sein d&#39;une arborescence en passant entre noeuds &quot;parents&quot; et noeuds &quot;enfants&quot;. Pour cela, les principales fonctions sont les suivantes (dans nos exemples, on les applique à un élément <code class="prettyprint">elementFromDOM</code>) :</p>
+    
+    <ul class="compte-moi">
+    <li>Bien joué, tu as trouvé ce noeud &quot;caché&quot; :)</li>
+    <li>Pour remonter au noeud parent, on fait : <code class="prettyprint">elementFromDOM.parentNode</code></li>
+    <li class="compte-moi">Pour aller au 3ème noeud enfant, on fait : <code class="prettyprint">elementFromDOM.childNodes[2]</code></li>
+    <li>Pour remonter au dernier noeud enfant, on fait : <code class="prettyprint">elementFromDOM.lastChild</code></li>
+    <li class="compte-moi">Pour passer au prochain &quot;noeud&quot; ayant le même parent, on fait : <code class="prettyprint">elementFromDOM.nextSibling</code></li>
+    <li class="compte-moi">Pour passer au &quot;noeud&quot; précédent ayant le même parent, on fait : <code class="prettyprint">elementFromDOM.previousSibling</code></li>
+    </ul>
+    
+    <h3>4.2. Pour modifier le DOM</h3>
+    
+    <p>Voici quelques exemples d&#39;actions que l&#39;on peut effectuer sur un élément du DOM (exemples en imaginant que l&#39;élément est stocké avec la variable <code class="prettyprint">elementFromDOM</code>:</p>
+    
+    <div class="compte-moi">
+    <ul>
+    <li>Changer le contenu HTML avec <code class="prettyprint">elementFromDOM.innerHTML = &quot;nouvelle valeur&quot;</code>.</li>
+    <li>Changer le texte avec <code class="prettyprint">elementFromDOM.textContent = &quot;nouvelle valeur&quot;</code>.</li>
+    <li>Ajouter ou supprimer une classe CSS avec <code class="prettyprint">elementFromDOM.classList.add(&quot;title&quot;)</code> ou <code class="prettyprint">elementFromDOM.classList.remove(&quot;title&quot;)</code>.</li>
+    <li>Changer un attribut avec <code class="prettyprint">elementFromDOM.setAttribute(&quot;href&quot;, &quot;http://www.thehackingproject.org&quot;)</code>.</li>
+    <li>Modifier une propriété CSS avec <code class="prettyprint">elementFromDOM.style.font = &quot;nouvelle propriete&quot;</code>, par exemple <code class="prettyprint">elementFromDOM.style.color = &quot;red&quot;</code>.</li>
+    </ul>
+    
+    <ul style="color: white;">
+    <li>Félicitation, tu viens de trouver le code caché</li>
+    <li>Cette partie n'était pas évidente !</li>
+    </ul>
+    </div>
+    <p>Et pour finir voici les principales actions que l&#39;on peut effectuer pour modifier la structure de la page HTML :</p>
+    
+    <ul>
+    <li class="compte-moi">Créer un élément HTML avec <code class="prettyprint">document.createElement(element)</code></li>
+    <li>Supprimer un élément HTML avec <code class="prettyprint">document.removeChild(element)</code> ou <code class="prettyprint">elementFromDOM.remove()</code></li>
+    <li class="compte-moi">Rajouter un élément HTML avec<code class="prettyprint">document.appendChild(element)</code></li>
+    <li>Remplacer un élément HTML avec <code class="prettyprint">document.replaceChild(element)</code></li>
+    </ul>
+    
+    <h2>5. Pour aller plus loin</h2>
+    
+    <p>Tu trouveras une liste assez complète des fonctions disponibles via le DOM dans la <a href="https://developer.mozilla.org/fr/docs/Web/API/Document" rel="nofollow" target="_blank">documentation de Mozilla</a>.</p>
+
+  </body>
+
+  <script src="script_parcours_DOM.js"></script>
+
+</html>
