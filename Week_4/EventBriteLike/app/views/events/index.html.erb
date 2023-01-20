@@ -1,0 +1,19 @@
+<div class="p-5 mb-4 bg-image rounded-3" style="background-image: url('https://images.pexels.com/photos/1684187/pexels-photo-1684187.jpeg'); background-size: 100%;">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Bienvenue sur The Event Project ! 🎉</h1>
+    <p class="col-md-8 fs-4">Ici c'est notre super site d'événement, il est chouette, non ?</p>
+  </div>
+</div>
+
+<h3>Voici tous les événements disponible:</h3><br>
+
+<% @events.sort.each do |event| %>
+  <div class="card bg-warning" style="width: 25rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= event.title %></h5>
+      <p class="card-text">Organisé par: <%= link_to "#{event.admin.first_name}", user_path(event.admin.id) %></p>
+      <%= button_to "Voir cet événement", event_path(event.id), :method => "get", class: 'btn btn-dark' %>
+    </div>
+  </div>
+  <hr/>
+<% end %>

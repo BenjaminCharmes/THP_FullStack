@@ -1,0 +1,28 @@
+<div class="text-center" style="padding: 15px">
+  <div class="form-signin w-50 m-auto">
+    <h1 class="h3 mb-3 fw-normal">Se connecter</h1>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Entre ton email", class: 'form-control text-center' %>
+      </div><br/>
+
+      <div class="form-group">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Entre ton mot de passe", class: 'form-control text-center' %>
+      </div><br/>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="form-group">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div><br/>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Se connecter", class: 'w-100 btn btn-lg btn-primary' %>
+      </div><br/>
+    <% end %>
+
+    <%= render "devise/shared/links" %>

@@ -1,0 +1,37 @@
+<h1>Bienvenue sur la page de <%= @user.first_name %> !</h1>
+
+<div class="card bg-light text-dark" style="width: 50%;">
+    <div class="card-body">
+    <p>
+    <strong>Nom:</strong> <%= @user.last_name %>
+    </p>
+    <p>
+    <strong>Prénom:</strong> <%= @user.first_name %>
+    </p>
+    <p>
+    <strong>Description:</strong> <%= @user.description %>
+    </p>
+    <p>
+    <strong>Email:</strong> <%= @user.email %><br/>
+    </p>
+    <p>
+    <strong>Créé le:</strong> <%= @user.created_at %>
+    </p>
+  </div>
+</div><br/>
+
+<% if current_user == @user %>
+  <%= button_to "Modifier l'email et le mot de passe", edit_user_registration_path(@user.id), :method => "get", class: 'btn btn-warning' %><br>
+  <%= button_to "Modifier les autres informations", edit_user_path(@user.id), :method => "get", class: 'btn btn-warning' %><br>
+<% end %>
+
+<h3>Voici les événements que tu as créé:</h3><br/>
+<% @events.sort.each do |event| %>
+  <div class="card bg-warning" style="width: 25rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= event.title %></h5>
+      <%= button_to "Voir cet événement", event_path(event.id), :method => "get", class: 'btn btn-dark' %>
+    </div>
+  </div>
+  <hr/>
+<% end %>

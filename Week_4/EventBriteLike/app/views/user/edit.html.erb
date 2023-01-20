@@ -1,0 +1,41 @@
+<h1>Bienvenue sur la page de modification d'un utilisateur !</h1><br>    
+
+<% if @user %>
+  <% if @user.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <p>Nous n'avons pas réussi à créer l'utilisateur pour la (ou les) raison(s) suivante(s) :</p>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
+</div>
+<br/>
+
+<div class="text-center" style="padding: 15px">
+  <div class="form-signin w-50 m-auto">
+    <%= form_for :user, url: user_path(@user), html: { method: :put } do |f| %>
+
+      <div class="form-group">
+        <%= f.label 'Prénom:' %><br/>
+        <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: 'form-control text-center' %>
+      </div><br/>
+
+      <div class="form-group">
+        <%= f.label 'Nom:' %><br/>
+        <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", class: 'form-control text-center' %>
+      </div><br/>
+
+      <div class="form-group">
+        <%= f.label 'Description:' %><br/>
+        <%= f.text_field :description, autofocus: true, autocomplete: "description", class: 'form-control text-center' %>
+      </div><br/>
+
+      <div class="actions">
+        <%= f.submit "Modifier les informations", class: 'w-100 btn btn-lg btn-primary' %>
+      </div><br/>
+    <% end %>
+  </div>
+</div>

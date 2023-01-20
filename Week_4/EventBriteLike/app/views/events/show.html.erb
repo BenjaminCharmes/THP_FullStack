@@ -1,0 +1,30 @@
+<h1>Voici l'événement: <%= @event.title %></h1><br/>
+
+<div class="card bg-light text-dark" style="width: 75%;">
+    <div class="card-body">
+      <p>
+        <strong>Titre:</strong> <%= @event.title %><br/>
+        <br/>
+        <strong>Description:</strong> <%= @event.description %><br/>
+        <br/>
+        <strong>Nombre d'inscrits:</strong> <%= @event.users.count %><br/>
+        <br/>
+        <strong>Organisateur:</strong> <%= link_to @event.admin.email, user_path(@event.admin_id) %><br/>
+        <br/>
+        <strong>Date de début:</strong> <%= @event.start_date %><br/>
+        <strong>Date de fin:</strong> <%= @event.end_date %><br/>
+        <br/>
+        <strong>Lieu:</strong> <%= @event.location %><br/>
+        <br/>
+        <strong>Prix:</strong> <%= @event.price %>€
+      </p>
+    </div>
+</div><br/>
+
+<% if current_user %>
+  <% unless current_user == @event.admin %>
+    <%= button_to "Rejoindre l'événement", new_attendance_path, method: :get, params: { event: @event }, class: 'btn btn-primary' %>
+  <% else %>
+    <%= button_to "Mon espace événement", attendance_index_path, method: :get, params: { event: @event }, class: 'btn btn-primary' %>
+  <% end %>
+<% end %>

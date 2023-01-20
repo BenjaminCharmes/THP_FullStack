@@ -1,0 +1,33 @@
+<div class="container" style="margin-top: -60px">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <br><br><br>
+      <%= form_for @user, url: admins_user_path(params[:id]), method: "PATCH", html: { class: "form-signin mt-3" } do |f| %>
+        <h1 class="h3 mb-3 font-weight-normal text-center">Modifications</h1>
+        <div class="form-group">
+          <%= f.label :first_name, "Prénom" %><br />
+          <%= f.text_field :first_name, autofocus: true, autocomplete: "Prénom", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :last_name, "Nom" %><br />
+          <%= f.text_field :last_name, autofocus: true, autocomplete: "Nom", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description, "Description" %><br />
+          <%= f.text_area :description, autofocus: true, autocomplete: "Description", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :email, "Email" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label "Passer admin du site" %> <br />
+          <%= f.check_box :app_admin %>
+        </div>
+        <div class="actions mt-5">
+          <%= f.submit "Modifier", class: "btn btn-lg btn-info btn-block" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

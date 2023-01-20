@@ -1,0 +1,17 @@
+<h1>Bienvenue sur l'espace de ton événement: <%= @event.title %>.</h1><br>
+
+<h3>Voici la liste des invités:</h3><br>
+
+
+<% @attendances.each do |attendance| %>
+  <div class="card bg-warning" style="width: 25rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= User.find(attendance.user_id).email %></h5>
+    </div>
+  </div>
+  <hr/>
+<% end %>
+
+<%= button_to "Modifier l'événement", edit_event_path(@event.id), method: :get, class: 'btn btn-warning' %></li>
+
+

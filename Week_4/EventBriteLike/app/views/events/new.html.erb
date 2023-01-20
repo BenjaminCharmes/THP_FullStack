@@ -1,0 +1,55 @@
+<h1>Bienvenue sur la page de création d'un événement !</h1>   
+
+<% if @new_event %>
+  <% if @new_event.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <p>Nous n'avons pas réussi à créer l'événement pour la (ou les) raison(s) suivante(s) :</p>
+    <ul>
+      <% @new_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
+</div>
+
+<div class="text-center" style="padding: 15px">
+  <div class="form-signin w-50 m-auto">
+    <%= form_for(:event, url: events_path, html: { method: :post }) do |f| %>
+
+      <div class="form-group">
+        <%= f.label 'Date de début:' %><br/>
+        <%= f.datetime_field :start_date, autofocus: true, autocomplete: "start_date", placeholder: "Date de début de l'événement", class: 'form-control text-center' %>
+      </div><br/>
+
+      <div class="form-group">
+        <%= f.label 'Durée (en minute):' %><br/>
+        <%= f.number_field :duration, step: 5, autofocus: true, autocomplete: "duration", placeholder: "Durée de l'événement", class: 'form-control text-center' %>
+      </div><br/>
+
+      <div class="form-group">
+        <%= f.label 'Titre:' %><br/>
+        <%= f.text_field :title, autofocus: true, autocomplete: "title", placeholder: "Titre", class: 'form-control text-center' %>
+      </div><br/>
+
+      <div class="form-group">
+        <%= f.label 'Description:' %><br/>
+        <%= f.text_field :description, autofocus: true, autocomplete: "description", placeholder: "Description", class: 'form-control text-center' %>
+      </div><br/>
+
+      <div class="form-group">
+        <%= f.label 'Prix:' %><br/>
+        <%= f.number_field :price, in: 1..1000, step: 1, autofocus: true, autocomplete: "price", placeholder: "Prix par personne", class: 'form-control text-center' %>
+      </div><br/>
+
+      <div class="form-group">
+        <%= f.label 'Lieu:' %><br/>
+        <%= f.text_field :location, autofocus: true, autocomplete: "location", placeholder: "Lieu  de l'événement", class: 'form-control text-center' %>
+      </div><br/>
+
+      <div class="actions">
+        <%= f.submit "Créer l'événement", class: 'w-100 btn btn-lg btn-primary' %>
+      </div><br/>
+    <% end %>
+  </div>
+</div>

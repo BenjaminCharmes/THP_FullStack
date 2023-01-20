@@ -1,0 +1,7 @@
+<h1>Tu souhaite rejoindre l'événement: <%= @event.title %></h1>
+<h3>Il te suffit de payer la somme de <%= @event.price %>€</h3>
+
+<%= button_to "Passer commande", checkout_create_path(total: @event.price), params: { event: @event }, class: "btn btn-primary", remote: true %>      </div><br/>
+
+
+

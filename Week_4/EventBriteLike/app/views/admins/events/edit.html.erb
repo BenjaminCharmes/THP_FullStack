@@ -1,0 +1,38 @@
+<body class="d-flex flex-column h-100">
+  <main class="flex-shrink-0">
+      <!-- Page Content-->
+      <section class="py-5">
+          <div class="container px-5 my-5">
+              <div class="row gx-5 justify-content-center">
+                  <div class="col-lg-6">
+                      <div class="text-center mb-5">
+                          <h1 class="fw-bolder"><%= @event.title %></h1>
+                            <p>Organisateur: <%= @event.admin.email %><br>
+                            <br>
+                            <span style="font-size: 1.4rem"> Description: <%= @event.description%></span><br>
+                            <br>
+                            Date début: <%= @event.display_date(@event.start_date)%><br>
+                            Date de fin: <%= @event.display_date(@event.end_date) %><br>
+                            Lieux: <%= @event.location %><br>
+                            </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="row gx-5 justify-content-center">
+                  <%= image_tag @event.event_picture, class: "img-fluid rounded-3 mb-5", alt: 'avatar', style: "max-height: 1300px; width: auto;" if @event.event_picture.attached? %>
+              </div>
+              <div class="row gx-5 justify-content-center">
+                  <div class="col-lg-6">
+                      <div class="text-center mb-5">
+                          <p class="lead fw-normal text-muted">nombre de participants: <%= @event.customers.length%><br>Prix: <%= @event.price %>€</p>
+                          <%= form_for @event, url: admins_event_path(params[:id]), method: "PATCH", html: { class: "form-signin mt-3" } do |form| %>
+                          <%= form.select :validated, [['valider', 1], ['refuser', 0],['Laisser en attente', nil]], class: 'form-control' %>
+                          <%= form.submit "enregistrer", class: "btn btn-primary" %>
+                          <% end %>                                    
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </main>
+</body>
