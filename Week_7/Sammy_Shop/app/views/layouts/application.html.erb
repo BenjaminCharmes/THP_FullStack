@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SammyCatProject</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js%22%3E%22%3E"></script>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+
+  <body class= "bg-gradient-to-l from-indigo-500">
+
+       <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden bg-fixed" style="background-image: url(#logo_a)">
+
+        <!-- Site header -->
+        <header class="absolute w-full z-30 bg-white border-gray-200 dark:bg-gray-900">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-20">
+
+                    <!-- Site branding -->
+                    <div class="shrink-0 mr-5">
+                        <!-- Logo -->
+                        <a class="block" href="/" aria-label="Cruip">
+                            <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient x1="26%" y1="100%" x2="100%" y2="100%" id="logo_a">
+                                        <stop stop-color="#3ABAB4" offset="0%" />
+                                        <stop stop-color="#7F9CF5" offset="100%" />
+                                    </linearGradient>
+                                    <linearGradient x1="26%" y1="100%" x2="100%" y2="100%" id="logo_b">
+                                        <stop stop-color="#3ABAB4" offset="0%" />
+                                        <stop stop-color="#3ABAB4" stop-opacity="0" offset="100%" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M32 16h-8a8 8 0 10-16 0H0C0 7.163 7.163 0 16 0s16 7.163 16 16z" fill="url(#logo_a)" />
+                                <path d="M32 16c0 8.837-7.163 16-16 16S0 24.837 0 16h8a8 8 0 1016 0h8z" fill="url(#logo_b)" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+
+                        <!-- Desktop menu links -->
+                        <ul class="flex grow flex-wrap items-center font-medium">
+                            <li>
+                                <%= button_to "Accueil", root_path,  method: :get, class: 'text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out' %></a>
+                            </li>
+                            <% if current_user %>
+                            <li>    
+                                <%= button_to "Mon Profil", user_path(current_user.id), method: :get, class: 'text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out' %></a>
+                            </li>
+                            <li>    
+                                <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, class: 'text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out' %></a>
+                            </li>
+                            <% else %>
+                            <li>    
+                                <%= button_to "S'inscrire", new_user_registration_path, method: :get, class: 'text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out' %></a>
+                            </li>
+                            <li>    
+                                <%= button_to "Se connecter", new_user_session_path, method: :get, class: 'text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out' %></a>
+                            </li>
+                            <% end %>
+
+                        <!-- Desktop CTA on the right -->
+                        <ul class="flex justify-end flex-wrap items-center">
+                        <% if current_user %>
+                            <li>
+                                <%= button_to "Panier", cart_path(current_user_cart.id), method: :get, class: 'btn-sm text-white bg-teal-500 hover:bg-teal-400 ml-6' %></a>
+                            </li>
+                        <% end %>
+                        </ul>
+
+                        <ul class="flex justify-end flex-wrap items-center">
+                            <% if current_user %>
+                                <% if current_user.is_admin %>
+                                    <li>
+                                        <%= button_to "Dashboard", admin_root_path, method: :get, class: 'btn-sm text-white bg-teal-500 hover:bg-teal-400 ml-6' %></a>
+                                    </li>
+                                    
+                                <% end %>
+                            <% end %>
+                        </ul>
+
+                    </nav>
+
+                    </div>
+                    </div>
+                    </header>
+                    <br> <br>
+    <%= yield %>
+
+
+</div>
+  </body>
+</html>
