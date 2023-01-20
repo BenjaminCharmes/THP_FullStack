@@ -44,11 +44,11 @@ Here is the repository of all my projects from the FullStack bootcamp training a
 
 ### [:heavy_check_mark: **Week 4:** Advanced Rails](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4)
 
-- [**Day 1:** Mailer and events](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4/Day_1)
-- [**Day 2:** Devise](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4/Day_2)
-- [**Day 3:** Services and APIs](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4/Day_3)
-- [**Day 4:** Asset Pipeline & Active Storage](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4/Day_4)
-- [**Day 5:** Administrator interface](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4/Day_5)
+- [**Day 1:** Mailer and events](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4)
+- [**Day 2:** Devise](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4)
+- [**Day 3:** Services and APIs](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4)
+- [**Day 4:** Asset Pipeline & Active Storage](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4)
+- [**Day 5:** Administrator interface](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_4)
 
 ### [:heavy_check_mark: **Week 5:** HTML / CSS](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_5)
 
