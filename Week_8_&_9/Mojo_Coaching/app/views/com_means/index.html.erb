@@ -1,0 +1,20 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 w-full pb-6 pt-6">
+    <% @com_means.each do |com_mean| %>
+      <div class="w-80 mt-24 m-auto lg:mt-16 max-w-sm">
+      <%= image_tag("com_means/#{com_mean.communication_mean.parameterize(separator: '_')}.png", class: "rounded-t-2xl shadow-2xl w-full h-44 lg:w-full lg:h-44 2xl:w-full 2xl:h-44 object-cover", alt: "Photo du moyen de communication: #{com_mean.communication_mean}") %>
+        <div class="bg-white shadow-2xl rounded-b-3xl">
+          <h2 class="text-center text-gray-800 text-2xl font-bold pt-6"><%= com_mean.communication_mean %></h2>
+          <div class="text-center m-auto mt-6 w-full h-16">
+            <% if JoinTableUserComMean.find_by(user_id: current_user.id, com_mean_id: com_mean.id).nil? %>
+              <%= button_to "Ajouter ce moyen de communication", join_table_user_com_means_path, method: :post, params:{com_mean_id: com_mean.id },  class: "text-gray-500 font-bold lg:text-sm hover:text-gray-900"%>
+            <% else %>
+                <%= button_to "Supprimer ce moyen de communication", join_table_user_com_mean_path(JoinTableUserComMean.find_by(user_id: current_user.id, com_mean_id: com_mean.id)), method: :delete, class: "text-gray-500 font-bold lg:text-sm hover:text-gray-900"%>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>
+
+
+
