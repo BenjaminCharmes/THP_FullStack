@@ -14,7 +14,7 @@ On Thursday, each member of your group will have to hand in the project.
   
   [⬅️ - Back to Week 6️⃣](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_6)
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  [Go to Week 8️⃣ & 9️⃣ - ➡️](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_8_&_9)
+  [Go to Week 8️⃣ & 9️⃣ - ➡️](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_8_%26_9)
 
 </div>
 

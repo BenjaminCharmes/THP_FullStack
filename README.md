@@ -70,9 +70,9 @@ Here is the repository of all my projects from the FullStack bootcamp training a
 
 - [**Sammy Shop**](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_3/Day_1)
 
-### [:heavy_check_mark: **Week 8 & 9:** Final Project](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_8_to_9)
+### [:heavy_check_mark: **Week 8 & 9:** Final Project](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_8_%26_9)
 
-- [**Mojo Coaching**](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_8_to_9)
+- [**Mojo Coaching**](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_8_%26_9)
 
 ## 🚨 - Disclaimer
 
