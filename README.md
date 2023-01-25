@@ -81,15 +81,15 @@ Here is the repository of all my projects from the FullStack bootcamp training a
 
 ### [:heavy_check_mark: **Week 6:** Front-end JavaScript](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_6)
 
-- [**Day 1:** Reacting to events in JS](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_6/Day_1)
-- [**Day 2:** JavaScript in a Rails application](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_6/Day_2)
-- [**Day 3:** AJAX (1/2)](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_6/Day_3)
-- [**Day 4:** AJAX (2/2)](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_6/Day_4)
-- [**Day 5:** Teamwork and Git workflow](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_6/Day_5)
+- [**Day 1:** Reacting to events in JS](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_6/Day_1)
+- [**Day 2:** JavaScript in a Rails application](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_6/Day_2)
+- [**Day 3:** AJAX (1/2)](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_6/Day_3)
+- [**Day 4:** AJAX (2/2)](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_6/Day_4)
+- [**Day 5:** Teamwork and Git workflow](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_6/Day_5)
 
 ### [:heavy_check_mark: **Week 7:** Project: online shop](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_7)
 
-- [**Sammy Shop**](https://github.com/BenjaminCharmes/THP_Introduction/tree/main/Week_7)
+- [**Sammy Shop**](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_7)
 
 ### [:heavy_check_mark: **Week 8 & 9:** Final Project](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_8_%26_9)
 
