@@ -4,6 +4,8 @@
 
 <div align="center">
 
+  [⬅️ - Back to the previous training - ➡️](https://github.com/BenjaminCharmes/THP_Introduciton)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   [Go to Day 1️⃣ - ➡️](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_1/Day_1)
 
 </div>
