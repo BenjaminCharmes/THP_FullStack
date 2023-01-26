@@ -1,5 +1,7 @@
 <h1 align="center">Week 4 of The Hacking Project: Object-Oriented Programming !</h1>
 
+This week, you'll learn about Object Oriented Programming, an essential concept when doing Ruby.
+
 <h2 align="center">🎉 Week 1 of the FullStack training 🎉</h2>
 
 <div align="center">

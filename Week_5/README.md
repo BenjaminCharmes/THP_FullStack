@@ -1,5 +1,7 @@
 <h1 align="center">Week 8 of The Hacking Project: HTML / CSS !</h1>
 
+You now know how to make Rails apps with great back-ends: it's time to move on to the front-end, to make your sites look like good-looking things. We'll introduce you to the concepts that will help you do that. And after a few days of design, it will be time to teach you JavaScript to make your site look more dynamic.
+
 <h2 align="center">🎉 Week 5 of the FullStack training 🎉</h2>
 
 <div align="center">

@@ -1,5 +1,7 @@
 <h1 align="center">Week 9 of The Hacking Project: Front-end JavaScript !</h1>
 
+For this last week of the course, we will consolidate your knowledge of JavaScript and then introduce you to other tools that will quickly become indispensable, notably AJAX requests.
+
 <h2 align="center">🎉 Week 6 of the FullStack training 🎉</h2>
 
 <div align="center">
