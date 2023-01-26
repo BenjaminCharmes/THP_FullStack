@@ -6,6 +6,8 @@ We will make a nice application in Sinatra
 
 <div align="center">
   
+  [⬅️ - Back to Week 1️⃣](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_1)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   [Go to Day 2️⃣ - ➡️](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_2/Day_2)
 
 </div>

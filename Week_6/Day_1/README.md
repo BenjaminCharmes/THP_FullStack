@@ -10,6 +10,8 @@ PS: just like the DOM modification project: you can't touch the HTML file! We're
 
 <div align="center">
   
+  [⬅️ - Back to Week 5️⃣](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_5)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   [Go to Day 2️⃣ - ➡️](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_6/Day_2)
 
 </div>
