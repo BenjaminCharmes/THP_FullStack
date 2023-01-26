@@ -11,7 +11,9 @@ You're going to code an application where you can create events with a start dat
 <h2 align="center">🎉 Week 1: Day 1 of the FullStack training 🎉</h2>
 
 <div align="center">
-  
+
+  [⬅️ - Back to the previous training](https://github.com/BenjaminCharmes/THP_Introduction)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   [Go to Day 2️⃣ - ➡️](https://github.com/BenjaminCharmes/THP_FullStack/tree/main/Week_1/Day_2)
 
 </div>
